@@ -1,3 +1,6 @@
+<app-header title="Vocalía superior"
+            [isUserLoggedIn]="true" ></app-header>
+
 <router-outlet></router-outlet>
 
 
@@ -22,14 +25,14 @@
                 <mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell>
                 <mat-cell *matCellDef="let row">{{row.idPersona}}</mat-cell>
               </ng-container>
-              
-              
+
+
 
               <ng-container matColumnDef="nombre">
                 <mat-header-cell *matHeaderCellDef mat-sort-header>Nombre</mat-header-cell>
                 <mat-cell *matCellDef="let row">{{row.nombre}}</mat-cell>
               </ng-container>
-              
+
 
             <!-- Definición de la columna Apellido1 -->
             <ng-container matColumnDef="apellido1">
@@ -47,7 +50,7 @@
                 <mat-header-cell *matHeaderCellDef mat-sort-header> Grado </mat-header-cell>
                 <mat-cell *matCellDef="let row"> {{row.grado?.cdCodigo}} </mat-cell>
               </ng-container>
-              
+
 
             <ng-container matColumnDef="genero">
                 <mat-header-cell *matHeaderCellDef mat-sort-header> Sexo

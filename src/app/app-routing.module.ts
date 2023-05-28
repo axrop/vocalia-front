@@ -12,18 +12,21 @@ import { PreparatoriaComponent } from './pages/preparatoria/preparatoria.compone
 import { PreparatoriaEdicionComponent } from './pages/preparatoria/preparatoria-edicion/preparatoria-edicion.component';
 import { DenunciasNuevoComponent } from './pages/denuncias/denuncias-nuevo/denuncias-nuevo.component';
 import { LoginComponent } from './pages/login/login.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
 
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' }, // Redirige a LoginComponent
- 
+
+  { path: 'home', component: HomeComponent },
+
 
   {  path: 'catalogos', component: CatalogosComponent, children: [
     { path: 'nuevo', component: CatalogosEdicionComponent },
     { path: 'edicion/:id', component: CatalogosEdicionComponent }
   ]
-  
+
 },
 {
     path: 'personas', component: PersonasComponent

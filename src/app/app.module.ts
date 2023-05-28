@@ -9,7 +9,7 @@ import { CatalogosComponent } from './pages/catalogos/catalogos.component';
 import { DenunciasComponent } from './pages/denuncias/denuncias.component';
 import { CatalogosEdicionComponent } from './pages/catalogos/catalogos-edicion/catalogos-edicion.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PersonasComponent } from './personas/personas.component';
 import { PersonasEdicionComponent } from './personas/personas-edicion/personas-edicion.component';
 import { MatPaginatorIntl } from '@angular/material/paginator';
@@ -27,6 +27,9 @@ import { PreparatoriaEdicionComponent } from './pages/preparatoria/preparatoria-
 import { DenunciasNuevoComponent } from './pages/denuncias/denuncias-nuevo/denuncias-nuevo.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MatCardModule } from '@angular/material/card';
+import { ROUTES, RouterModule } from '@angular/router';
+import { AppHeaderComponent } from './pages/app-header/app-header.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 @NgModule({
@@ -36,7 +39,7 @@ import { MatCardModule } from '@angular/material/card';
     DenunciasComponent,
     CatalogosEdicionComponent,
     PersonasComponent,
-    PersonasEdicionComponent,   
+    PersonasEdicionComponent,
     CatalogosValoresComponent,
     ValoresEdicionComponent,
     DenunciasEdicionComponent,
@@ -47,7 +50,9 @@ import { MatCardModule } from '@angular/material/card';
     PreparatoriaComponent,
     PreparatoriaEdicionComponent,
     DenunciasNuevoComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    AppHeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +62,8 @@ import { MatCardModule } from '@angular/material/card';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatSortModule,
-    MatCardModule 
+    MatCardModule,
+    FormsModule
   ],
   providers: [
     {provide: MatPaginatorIntl, useClass: SpanishPaginatorIntl}

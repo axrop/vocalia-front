@@ -1,0 +1,61 @@
+<nav class="navbar navbar-inverse bg-inverse"
+  style="background: #3f51b5!important;"
+*ngIf="!isUserLoggedIn">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <span class="navbar-brand" style="color: #fff!important;">
+        <img src="assets/fuero_militar.png" width="30" height="30" class="d-inline-block align-top">
+        {{title}}
+      </span>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand navbar-light bg-light"
+style="background: #3f51b5!important;"
+  *ngIf="isUserLoggedIn">
+  <span class="navbar-brand" style="color: #fff!important;">
+    <img src="assets/fuero_militar.png" width="30" height="30" class="d-inline-block align-top">
+    {{title}}
+  </span>
+  <button class="navbar-toggler navbar-toggler-right" type="button"
+        data-toggle="collapse" data-target="#navbarTogglerMainMenu"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerMainMenu">
+    <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+      <li class="nav-item active">
+        <a class="nav-link" style="color: #fff!important;" href="/home">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: #fff!important;" href="/personas">Registrar persona</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: #fff!important;" href="/denuncia">Registrar denuncia</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: #fff!important;" href="/preliminar">Etapa preparatoria</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: #fff!important;" href="/catalogos">Registrar catálogos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: #fff!important;" href="/especialidad">Expedientes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: #fff!important;" href="/reporte">Reportes</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      <a class="nav-link" style="color: #fff!important;" href="/reporte">Perfil</a>
+    </span>
+
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-outline my-2 my-sm-0" type="submit">Logout</button>
+    </form>
+  </div>
+</nav>
+
+<br/>
